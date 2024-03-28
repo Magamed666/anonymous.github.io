@@ -32,6 +32,7 @@
 
     /* Стили для основного контента */
     .content {
+        display: none;
         padding: 20px;
         background: #ffe6f2; /* Белый с легким розовым оттенком */
         border-radius: 10px;
@@ -43,16 +44,16 @@
 
 <nav>
     <ul>
-        <li><a href="#about">О себе</a></li>
-        <li><a href="#portfolio">Портфолио</a></li>
-        <li><a href="#contacts">Контакты</a></li>
+        <li><a href="#" onclick="showPage('about')">О себе</a></li>
+        <li><a href="#" onclick="showPage('portfolio')">Портфолио</a></li>
+        <li><a href="#" onclick="showPage('contacts')">Контакты</a></li>
     </ul>
 </nav>
 
 <div id="about" class="content">
     <h2>О себе</h2>
     <p>Ваш текст о себе здесь...</p>
-    <img src="your_photo.jpg" alt="Ваше фото">
+    <img src="IMG_9724.JPG" alt="Ваше фото">
 </div>
 
 <div id="portfolio" class="content">
@@ -66,21 +67,15 @@
     <button onclick="openContactForm()">Добавить контакты</button>
 </div>
 
-<div id="contactPopup" class="popup">
-    <h2>Добавление контактных данных</h2>
-    <form>
-        <label for="name">Имя:</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
-        <label for="message">Сообщение:</label><br>
-        <textarea id="message" name="message" rows="4"></textarea><br><br>
-        <button type="submit">Отправить</button>
-    </form>
-    <button onclick="closeContactForm()">Закрыть</button>
-</div>
-
-<div id="overlay" class="overlay" onclick="closeContactForm()"></div>
+<script>
+    function showPage(pageId) {
+        var pages = document.querySelectorAll('.content');
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].style.display = 'none';
+        }
+        document.getElementById(pageId).style.display = 'block';
+    }
+</script>
 
 </body>
 </html>

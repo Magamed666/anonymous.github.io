@@ -36,7 +36,7 @@ nav ul li a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    background: #ffdbec; /* Белый цвет */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -53,4 +53,17 @@ nav ul li a {
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
+
+#about {
+    background: #d68aa9; /* Светло-розовый цвет */
+}
+
+#portfolio {
+    background: #ffc5ce; /* Светло-светло-розовый цвет */
+}
+
+#contacts {
+    background: #ffd4e6; /* Розовый цвет */
+}
+
 
