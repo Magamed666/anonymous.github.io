@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Моя карточка</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="script.js"></script>
+<style>
+    /* Стили для верхнего меню */
+    nav {
+        background: #ff69b4; /* Розовый цвет */
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* Стили для основного контента */
+    .content {
+        padding: 20px;
+        background: #ffe6f2; /* Белый с легким розовым оттенком */
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#about">О себе</a></li>
+        <li><a href="#portfolio">Портфолио</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+    </ul>
+</nav>
+
+<div id="about" class="content">
+    <h2>О себе</h2>
+    <p>Ваш текст о себе здесь...</p>
+    <img src="your_photo.jpg" alt="Ваше фото">
+</div>
+
+<div id="portfolio" class="content">
+    <h2>Портфолио</h2>
+    <p>Ваше портфолио здесь...</p>
+</div>
+
+<div id="contacts" class="content">
+    <h2>Контакты</h2>
+    <p>Ваши контактные данные здесь...</p>
+    <button onclick="openContactForm()">Добавить контакты</button>
+</div>
+
+<div id="contactPopup" class="popup">
+    <h2>Добавление контактных данных</h2>
+    <form>
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="message">Сообщение:</label><br>
+        <textarea id="message" name="message" rows="4"></textarea><br><br>
+        <button type="submit">Отправить</button>
+    </form>
+    <button onclick="closeContactForm()">Закрыть</button>
+</div>
+
+<div id="overlay" class="overlay" onclick="closeContactForm()"></div>
+
+</body>
+</html>
