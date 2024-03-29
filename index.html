@@ -1,81 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="ru">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Моя карточка</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
-<script src="script.js"></script>
-<style>
-    /* Стили для верхнего меню */
-    nav {
-        background: #ff69b4; /* Розовый цвет */
-        padding: 10px;
-        text-align: center;
-    }
-
-    nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: inline;
-        margin-right: 20px;
-    }
-
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-    }
-
-    /* Стили для основного контента */
-    .content {
-        display: none;
-        padding: 20px;
-        background: #ffe6f2; /* Белый с легким розовым оттенком */
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
-</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Моё портфолио</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Закрыть</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">Обо мне</a>
+            </li>
+            <li>
+                <a href="#experience">Опыт</a>
+            </li>
+            <li>
+                <a href="#education">Образование</a>
+            </li>
+            <li>
+                <a href="#skills">Навыки</a>
+            </li>
+            <li>
+                <a href="#contact">Контакты</a>
+            </li>            
+        </ul>
+    </header>
+    <!-- End header -->
 
-<nav>
-    <ul>
-        <li><a href="#" onclick="showPage('about')">О себе</a></li>
-        <li><a href="#" onclick="showPage('portfolio')">Портфолио</a></li>
-        <li><a href="#" onclick="showPage('contacts')">Контакты</a></li>
-    </ul>
-</nav>
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Акшабаева Махаббат</h1>
+            <h2>я устала</h2>
+        </div>
+        <!-- End #lead-content -->
 
-<div id="about" class="content">
-    <h2>О себе</h2>
-    <p>Ваш текст о себе здесь...</p>
-    <img src="IMG_9724.JPG" alt="Ваше фото">
-</div>
+        <div id="lead-overlay"></div>
 
-<div id="portfolio" class="content">
-    <h2>Портфолио</h2>
-    <p>Ваше портфолио здесь...</p>
-</div>
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
 
-<div id="contacts" class="content">
-    <h2>Контакты</h2>
-    <p>Ваши контактные данные здесь...</p>
-    <button onclick="openContactForm()">Добавить контакты</button>
-</div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">Обо мне</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        Я вообще не хочу быть программистом. Но мне пришлось... А вообще я предпрениматель.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
 
-<script>
-    function showPage(pageId) {
-        var pages = document.querySelectorAll('.content');
-        for (var i = 0; i < pages.length; i++) {
-            pages[i].style.display = 'none';
-        }
-        document.getElementById(pageId).style.display = 'block';
-    }
-</script>
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Опыт</h2>
+        <div id="experience-timeline">
+            <div data-date="2015 – 2016">
+                <h3>В школе, 5 класс</h3>
+                <h4>Купли продажа</h4>
+                <p>
+                   Покупала или заказывала орбизы по дешевле и продавала по дороже. Хватало на столовку, я довольна
+                </p>
+            </div>
 
+            <div data-date="2018 – 2019">
+                <h3>По городу. 8-9 класс</h3>
+                <h4>Компания своя</h4>
+                <p>
+                    Делала слаймы и продавала в инсте, а также продавала другим магазинам по всему городу. Капец тогда в день по 15000 зарабатывала.
+                </p>
+            </div>
+
+            <div data-date="2021 – 2022">
+                <h3>По всему Кз. 10-11 класс</h3>
+                <h4>Бренд</h4>
+                <p>
+                    Научилась шить, купила швейную машинку и продавала сумки ручной работы. Хорошее время, но не актуально было.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Образование</h2>
+        <div class="education-block">
+            <h3>35 школа</h3>
+            <span class="education-date">2010 - 2022</span>
+            <h4>жай май</h4>
+            <p>
+                че я там делала бож
+            </p>
+        </div>
+        <!-- End .education-block -->
+
+        <div class="education-block">
+            <h3>Университет имени Шакарима</h3>
+            <span class="education-date">2022 - ???</span>
+            <h4>Программист чеее</h4>
+            <ul>
+                <li>
+                    Я сама в жизни не думала что стану программистом 
+                </li>
+                <li>
+                    Из-за гранта тут
+                </li>
+                <li>
+                    Жай хобби
+                </li>
+            </ul>
+        </div>
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
+
+    <div id="skills">
+        <h2 class="heading">Навыки</h2>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>C</li>
+            <li>C#</li>
+            <li>C++</li>
+            <li>PHP</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+    </div>
+    <!-- End #skills -->
+
+    <div id="contact">
+        <h2>Контакты</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/email@email.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Авторские права &copy; <span id="current-year">2024</span> Магамед продакшн
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
+
 </html>
